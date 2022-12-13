@@ -9,10 +9,10 @@ namespace lab9
         static void Main()
         {
             //Стратегия (Strategy)
-            Computer comp = new Computer(4, "intel core i-7", new WindWork());
-            comp.Move();
+            Computer comp = new Computer(16, "intel core i-7", new WindWork());
+            comp.Work();
             comp.Rebut = new Linuxwork();
-            comp.Move();
+            comp.Work();
             //Состояние (State)
             Student std = new Student(new MediumStudentState());
             std.Good();
@@ -71,7 +71,7 @@ namespace lab9
             Rebut = mov;
         }
         public IWork Rebut { private get; set; }
-        public void Move()
+        public void Work()
         {
             Rebut.Work();
         }
